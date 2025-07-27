@@ -1,7 +1,7 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:notification_manager/notification_manager_method_channel.dart';
-import 'package:notification_manager/notification_manager.dart';
+import 'package:flutter_notification_manager/notification_manager_method_channel.dart';
+import 'package:flutter_notification_manager/notification_manager.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
