@@ -1,6 +1,13 @@
-# notification_manager
+# flutter_system_notifications
 
 A high-quality, cross-platform Flutter plugin for managing system-level local notifications with advanced features like scheduling, action buttons, and deep linking.
+
+## 📚 Documentation & Resources
+
+- 📖 **[Medium Article](https://medium.com/@abubakarbabaganasani/building-a-cross-platform-notification-in-flutter-7fd2b4caf532)** - Complete guide with examples
+- 📦 **[pub.dev Package](https://pub.dev/packages/flutter_system_notifications)** - Download and install
+- 📚 **[GitHub Repository](https://github.com/abubakarsani-raven/flutter_system_notifications)** - Source code and issues
+- 📧 **Contact**: abubakarbabaganasani@gmail.com
 
 ## ✨ Features
 
@@ -16,11 +23,11 @@ A high-quality, cross-platform Flutter plugin for managing system-level local no
 
 ## 🚀 Installation
 
-Add `notification_manager` to your `pubspec.yaml`:
+Add `flutter_system_notifications` to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  notification_manager: ^1.0.0
+  flutter_system_notifications: ^1.0.2
 ```
 
 Run:
@@ -33,7 +40,7 @@ flutter pub get
 ### 1. Initialize the Plugin
 
 ```dart
-import 'package:notification_manager/notification_manager.dart';
+import 'package:flutter_system_notifications/flutter_system_notifications.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -447,11 +454,22 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- 📧 Email: support@notificationmanager.dev
-- 🐛 Issues: [GitHub Issues](https://github.com/your-org/notification_manager/issues)
-- 📖 Documentation: [API Docs](https://pub.dev/documentation/notification_manager)
+- 📧 Email: abubakarbabaganasani@gmail.com
+- 🐛 Issues: [GitHub Issues](https://github.com/abubakarsani-raven/flutter_system_notifications/issues)
+- 📖 Documentation: [API Docs](https://pub.dev/documentation/flutter_system_notifications)
+- 📝 Blog Post: [Medium Article](https://medium.com/@abubakarbabaganasani/building-a-cross-platform-notification-in-flutter-7fd2b4caf532)
+
+## 🌟 Show Your Support
+
+If this plugin helps you, please consider:
+- ⭐ **Star the repository** on [GitHub](https://github.com/abubakarsani-raven/flutter_system_notifications)
+- 📝 **Write a review** on [pub.dev](https://pub.dev/packages/flutter_system_notifications)
+- 🐛 **Report issues** or suggest features
+- 💬 **Share** with other Flutter developers
 
 ---
 
 **Made with ❤️ for the Flutter community**
+
+**Author**: Abubakar Sani - abubakarbabaganasani@gmail.com
 
