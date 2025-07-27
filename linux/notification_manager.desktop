@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Notification Manager
+Comment=Flutter notification manager plugin
+Exec=notification_manager
+Icon=notification_manager
+Terminal=false
+Type=Application
+Categories=Utility;
+StartupNotify=true 
