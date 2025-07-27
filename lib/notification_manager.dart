@@ -293,21 +293,7 @@ class NotificationManager {
     return await NotificationManagerPlatform.instance.clearNotificationHistory();
   }
 
-  // These methods are called internally by the platform implementations
-  // when notification events are received via the event channel
-  void _handleNotificationAction(String notificationId, String actionId) {
-    _actionController.add(NotificationActionEvent(
-      notificationId: notificationId,
-      actionId: actionId,
-    ));
-  }
 
-  void _handleNotificationTap(String notificationId, NotificationPayload? payload) {
-    _tapController.add(NotificationTapEvent(
-      notificationId: notificationId,
-      payload: payload,
-    ));
-  }
 
   /// Dispose resources
   void dispose() {

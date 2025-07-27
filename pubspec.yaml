@@ -1,6 +1,6 @@
 name: notification_manager
 description: "A high-quality, cross-platform Flutter plugin for managing system-level local notifications with advanced features like scheduling, action buttons, and deep linking."
-version: 1.0.0
+version: 1.0.2
 homepage: https://github.com/abubakarsani-raven/notification_manager
 repository: https://github.com/abubakarsani-raven/notification_manager
 issue_tracker: https://github.com/abubakarsani-raven/notification_manager/issues
