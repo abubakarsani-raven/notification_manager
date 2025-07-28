@@ -1,3 +1,13 @@
+## 1.1.1
+
+* Enhanced API documentation with comprehensive examples
+* Added platform-specific setup instructions for iOS and Android
+* Improved installation guide with detailed configuration steps
+* Added troubleshooting section with common issues and solutions
+* Enhanced migration guide for users coming from other plugins
+* Updated documentation with version 1.1.0 improvements section
+* Added best practices and error handling examples
+
 ## 1.1.0
 
 * Fixed iOS build issues and podspec configuration
