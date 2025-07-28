@@ -5,8 +5,8 @@
 import FlutterMacOS
 import Foundation
 
-import notification_manager
+import flutter_system_notifications
 
 func RegisterGeneratedPlugins(registry: FlutterPluginRegistry) {
-  NotificationManagerPlugin.register(with: registry.registrar(forPlugin: "NotificationManagerPlugin"))
+  FlutterSystemNotificationsPlugin.register(with: registry.registrar(forPlugin: "FlutterSystemNotificationsPlugin"))
 }

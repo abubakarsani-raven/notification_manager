@@ -6,10 +6,10 @@
 
 #include "generated_plugin_registrant.h"
 
-#include <notification_manager/notification_manager_plugin.h>
+#include <flutter_system_notifications/flutter_system_notifications_plugin.h>
 
 void fl_register_plugins(FlPluginRegistry* registry) {
-  g_autoptr(FlPluginRegistrar) notification_manager_registrar =
-      fl_plugin_registry_get_registrar_for_plugin(registry, "NotificationManagerPlugin");
-  notification_manager_plugin_register_with_registrar(notification_manager_registrar);
+  g_autoptr(FlPluginRegistrar) flutter_system_notifications_registrar =
+      fl_plugin_registry_get_registrar_for_plugin(registry, "FlutterSystemNotificationsPlugin");
+  flutter_system_notifications_plugin_register_with_registrar(flutter_system_notifications_registrar);
 }

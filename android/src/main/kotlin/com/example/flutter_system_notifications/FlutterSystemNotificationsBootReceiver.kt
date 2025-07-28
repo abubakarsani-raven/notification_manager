@@ -1,4 +1,4 @@
-package com.example.notification_manager
+package com.example.flutter_system_notifications
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -10,7 +10,7 @@ import androidx.work.WorkManager
 import org.json.JSONObject
 import java.util.concurrent.TimeUnit
 
-class BootReceiver : BroadcastReceiver() {
+class FlutterSystemNotificationsBootReceiver : BroadcastReceiver() {
     
     override fun onReceive(context: Context?, intent: Intent?) {
         if (intent?.action == Intent.ACTION_BOOT_COMPLETED || 
@@ -53,7 +53,7 @@ class BootReceiver : BroadcastReceiver() {
                                 .putInt("repeatInterval", repeatInterval)
                                 .build()
                             
-                            val workRequest = OneTimeWorkRequestBuilder<NotificationWorker>()
+                            val workRequest = OneTimeWorkRequestBuilder<FlutterSystemNotificationsWorker>()
                                 .setInputData(workData)
                                 .setInitialDelay(delayMillis, TimeUnit.MILLISECONDS)
                                 .addTag("notification_$id")

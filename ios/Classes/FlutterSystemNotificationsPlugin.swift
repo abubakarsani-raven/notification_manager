@@ -3,7 +3,7 @@ import UIKit
 import UserNotifications
 import Foundation
 
-public class NotificationManagerPlugin: NSObject, FlutterPlugin, UNUserNotificationCenterDelegate {
+public class FlutterSystemNotificationsPlugin: NSObject, FlutterPlugin, UNUserNotificationCenterDelegate {
   private var eventSink: FlutterEventSink?
   private var methodChannel: FlutterMethodChannel?
   private var eventChannel: FlutterEventChannel?
@@ -12,9 +12,9 @@ public class NotificationManagerPlugin: NSObject, FlutterPlugin, UNUserNotificat
   private let scheduledKeyPrefix = "scheduled_notification_"
   
   public static func register(with registrar: FlutterPluginRegistrar) {
-    let channel = FlutterMethodChannel(name: "notification_manager", binaryMessenger: registrar.messenger())
-    let eventChannel = FlutterEventChannel(name: "notification_manager_events", binaryMessenger: registrar.messenger())
-    let instance = NotificationManagerPlugin()
+    let channel = FlutterMethodChannel(name: "flutter_system_notifications", binaryMessenger: registrar.messenger())
+    let eventChannel = FlutterEventChannel(name: "flutter_system_notifications_events", binaryMessenger: registrar.messenger())
+    let instance = FlutterSystemNotificationsPlugin()
     
     registrar.addMethodCallDelegate(instance, channel: channel)
     eventChannel.setStreamHandler(instance)
@@ -462,7 +462,7 @@ public class NotificationManagerPlugin: NSObject, FlutterPlugin, UNUserNotificat
 
 // MARK: - FlutterStreamHandler
 
-extension NotificationManagerPlugin: FlutterStreamHandler {
+extension FlutterSystemNotificationsPlugin: FlutterStreamHandler {
   public func onListen(withArguments arguments: Any?, eventSink events: @escaping FlutterEventSink) -> FlutterError? {
     self.eventSink = events
     return nil

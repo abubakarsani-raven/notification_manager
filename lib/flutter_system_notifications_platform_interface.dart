@@ -1,24 +1,24 @@
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
-import 'notification_manager_method_channel.dart';
+import 'flutter_system_notifications_method_channel.dart';
 
-abstract class NotificationManagerPlatform extends PlatformInterface {
-  /// Constructs a NotificationManagerPlatform.
-  NotificationManagerPlatform() : super(token: _token);
+abstract class FlutterSystemNotificationsPlatform extends PlatformInterface {
+  /// Constructs a FlutterSystemNotificationsPlatform.
+  FlutterSystemNotificationsPlatform() : super(token: _token);
 
   static final Object _token = Object();
 
-  static NotificationManagerPlatform _instance = MethodChannelNotificationManager();
+  static FlutterSystemNotificationsPlatform _instance = MethodChannelFlutterSystemNotifications();
 
-  /// The default instance of [NotificationManagerPlatform] to use.
+  /// The default instance of [FlutterSystemNotificationsPlatform] to use.
   ///
-  /// Defaults to [MethodChannelNotificationManager].
-  static NotificationManagerPlatform get instance => _instance;
+  /// Defaults to [MethodChannelFlutterSystemNotifications].
+  static FlutterSystemNotificationsPlatform get instance => _instance;
 
   /// Platform-specific implementations should set this with their own
-  /// platform-specific class that extends [NotificationManagerPlatform] when
+  /// platform-specific class that extends [FlutterSystemNotificationsPlatform] when
   /// they register themselves.
-  static set instance(NotificationManagerPlatform instance) {
+  static set instance(FlutterSystemNotificationsPlatform instance) {
     PlatformInterface.verifyToken(instance, _token);
     _instance = instance;
   }

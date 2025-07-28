@@ -1,4 +1,4 @@
-package com.example.notification_manager
+package com.example.flutter_system_notifications
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -23,8 +23,8 @@ import io.flutter.plugin.common.MethodChannel.Result
 import org.json.JSONObject
 import java.util.concurrent.TimeUnit
 
-/** NotificationManagerPlugin */
-class NotificationManagerPlugin: FlutterPlugin, MethodCallHandler, EventChannel.StreamHandler {
+/** FlutterSystemNotificationsPlugin */
+class FlutterSystemNotificationsPlugin: FlutterPlugin, MethodCallHandler, EventChannel.StreamHandler {
   /// The MethodChannel that will the communication between Flutter and native Android
   private lateinit var channel: MethodChannel
   private lateinit var eventChannel: EventChannel
@@ -48,10 +48,10 @@ class NotificationManagerPlugin: FlutterPlugin, MethodCallHandler, EventChannel.
     notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
     sharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
     
-    channel = MethodChannel(flutterPluginBinding.binaryMessenger, "notification_manager")
+    channel = MethodChannel(flutterPluginBinding.binaryMessenger, "flutter_system_notifications")
     channel.setMethodCallHandler(this)
     
-    eventChannel = EventChannel(flutterPluginBinding.binaryMessenger, "notification_manager_events")
+    eventChannel = EventChannel(flutterPluginBinding.binaryMessenger, "flutter_system_notifications_events")
     eventChannel.setStreamHandler(this)
     
     createNotificationChannel()
@@ -312,7 +312,7 @@ class NotificationManagerPlugin: FlutterPlugin, MethodCallHandler, EventChannel.
         .build()
 
       // Create work request
-      val workRequest = OneTimeWorkRequestBuilder<NotificationWorker>()
+              val workRequest = OneTimeWorkRequestBuilder<FlutterSystemNotificationsWorker>()
         .setInputData(workData)
         .setInitialDelay(delayMillis, TimeUnit.MILLISECONDS)
         .addTag("notification_$id")
@@ -375,7 +375,7 @@ class NotificationManagerPlugin: FlutterPlugin, MethodCallHandler, EventChannel.
           .putInt("repeatInterval", repeatInterval ?: 0)
           .build()
 
-        val workRequest = OneTimeWorkRequestBuilder<NotificationWorker>()
+        val workRequest = OneTimeWorkRequestBuilder<FlutterSystemNotificationsWorker>()
           .setInputData(workData)
           .setInitialDelay(delayMillis, TimeUnit.MILLISECONDS)
           .addTag("notification_$id")

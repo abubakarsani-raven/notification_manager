@@ -1,4 +1,4 @@
-package com.example.notification_manager
+package com.example.flutter_system_notifications
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -16,7 +16,7 @@ import androidx.work.WorkerParameters
 import org.json.JSONObject
 import java.util.concurrent.TimeUnit
 
-class NotificationWorker(
+class FlutterSystemNotificationsWorker(
     private val context: Context,
     params: WorkerParameters
 ) : Worker(context, params) {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-import 'package:notification_manager/notification_manager.dart';
-import 'package:notification_manager/notification_badge.dart';
+import 'package:flutter_system_notifications/flutter_system_notifications.dart';
+import 'package:flutter_system_notifications/flutter_system_notifications_badge.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 void main() {
@@ -45,24 +45,8 @@ class _MyAppState extends State<MyApp> {
       // Check current permission status
       final hasPermission = await _notificationManager.requestPermissions();
       
-      // Set up event listeners
-      _notificationManager.onNotificationAction.listen((event) {
-        if (mounted) {
-          setState(() {
-            _statusMessage = '🎯 Action triggered: ${event.actionId}';
-          });
-        }
-        print('Action triggered: ${event.actionId}');
-      });
-      
-      _notificationManager.onNotificationTap.listen((event) {
-        if (mounted) {
-          setState(() {
-            _statusMessage = '👆 Notification tapped: ${event.notificationId}';
-          });
-        }
-        print('Notification tapped: ${event.notificationId}');
-      });
+      // Note: Event listeners for notification actions and taps are not yet implemented
+      // in the current version of the plugin
       
       // Set final status
       if (mounted) {

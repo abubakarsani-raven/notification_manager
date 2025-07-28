@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'notification_manager.dart';
+import 'flutter_system_notifications.dart';
 
 /// A widget that displays a notification badge with unread count
 class NotificationBadge extends StatefulWidget {

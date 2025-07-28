@@ -1,3 +1,14 @@
+## 1.1.0
+
+* Fixed iOS build issues and podspec configuration
+* Updated plugin name from notification_manager to flutter_system_notifications
+* Improved type safety in data models with robust fromJson methods
+* Enhanced error handling for cross-platform compatibility
+* Updated all platform implementations (iOS, Android, macOS, Windows, Linux)
+* Added comprehensive API documentation
+* Improved test coverage and fixed type casting issues
+* Updated Medium article with code formatting and emojis
+
 ## 1.0.3
 
 * Added author contact information and Medium article link

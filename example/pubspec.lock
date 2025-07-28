@@ -83,6 +83,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.0.0"
+  flutter_system_notifications:
+    dependency: "direct main"
+    description:
+      path: ".."
+      relative: true
+    source: path
+    version: "1.1.0"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -159,13 +166,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.16.0"
-  notification_manager:
-    dependency: "direct main"
-    description:
-      path: ".."
-      relative: true
-    source: path
-    version: "1.0.0"
   path:
     dependency: transitive
     description:

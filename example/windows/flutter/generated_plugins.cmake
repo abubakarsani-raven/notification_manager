@@ -3,7 +3,7 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
-  notification_manager
+  flutter_system_notifications
   permission_handler_windows
 )
 

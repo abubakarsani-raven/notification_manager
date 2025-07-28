@@ -1,19 +1,19 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
-import 'notification_manager_platform_interface.dart';
+import 'flutter_system_notifications_platform_interface.dart';
 
-/// An implementation of [NotificationManagerPlatform] that uses method channels.
-class MethodChannelNotificationManager extends NotificationManagerPlatform {
+/// An implementation of [FlutterSystemNotificationsPlatform] that uses method channels.
+class MethodChannelFlutterSystemNotifications extends FlutterSystemNotificationsPlatform {
   /// The method channel used to interact with the native platform.
   @visibleForTesting
-  final methodChannel = const MethodChannel('notification_manager');
+  final methodChannel = const MethodChannel('flutter_system_notifications');
 
   /// The event channel for notification events
   @visibleForTesting
-  final eventChannel = const EventChannel('notification_manager_events');
+  final eventChannel = const EventChannel('flutter_system_notifications_events');
 
-  MethodChannelNotificationManager() {
+  MethodChannelFlutterSystemNotifications() {
     _setupEventChannel();
   }
 

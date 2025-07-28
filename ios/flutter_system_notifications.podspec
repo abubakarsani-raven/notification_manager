@@ -1,15 +1,15 @@
 #
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html.
-# Run `pod lib lint notification_manager.podspec` to validate before publishing.
+# Run `pod lib lint flutter_system_notifications.podspec` to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'notification_manager'
-  s.version          = '0.0.1'
-  s.summary          = 'A new Flutter plugin project.'
+  s.name             = 'flutter_system_notifications'
+  s.version          = '1.0.3'
+  s.summary          = 'A high-quality, cross-platform Flutter plugin for managing system-level local notifications with advanced features like scheduling, action buttons, and deep linking.'
   s.description      = <<-DESC
-A new Flutter plugin project.
+A high-quality, cross-platform Flutter plugin for managing system-level local notifications with advanced features like scheduling, action buttons, and deep linking.
                        DESC
-  s.homepage         = 'http://example.com'
+  s.homepage         = 'https://github.com/abubakarsani-raven/flutter_system_notifications'
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Your Company' => 'email@example.com' }
   s.source           = { :path => '.' }
@@ -25,5 +25,5 @@ A new Flutter plugin project.
   # required reason APIs, update the PrivacyInfo.xcprivacy file to describe your
   # plugin's privacy impact, and then uncomment this line. For more information,
   # see https://developer.apple.com/documentation/bundleresources/privacy_manifest_files
-  # s.resource_bundles = {'notification_manager_privacy' => ['Resources/PrivacyInfo.xcprivacy']}
-end
+  # s.resource_bundles = {'flutter_system_notifications_privacy' => ['Resources/PrivacyInfo.xcprivacy']}
+end 
